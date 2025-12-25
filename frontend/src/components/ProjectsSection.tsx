@@ -45,11 +45,11 @@ const ProjectsSection: React.FC = () => {
                   <motion.div 
                     whileHover={{ scale: 0.98, rotate: idx % 2 === 0 ? -1 : 1 }}
                     transition={{ duration: 0.6 }}
-                    className="relative rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-2xl border border-white/5 bg-zinc-900 group-hover:border-orange-500/20"
+                    className="relative rounded-4xl sm:rounded-[3rem] overflow-hidden shadow-2xl border border-white/5 bg-zinc-900 group-hover:border-orange-500/20"
                   >
                     <motion.img 
                       src={project.image} 
-                      className="w-full aspect-[16/10] object-cover transition-transform duration-[2000ms] group-hover:scale-110 opacity-80 group-hover:opacity-100" 
+                      className="w-full aspect-16/10 object-cover transition-transform duration-2000 group-hover:scale-110 opacity-80 group-hover:opacity-100" 
                       alt={project.title} 
                     />
                     <div className="absolute inset-0 bg-orange-600/0 group-hover:bg-orange-600/10 transition-all duration-700"></div>

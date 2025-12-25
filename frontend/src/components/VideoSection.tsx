@@ -14,9 +14,9 @@ const VideoSection: React.FC = () => {
             muted 
             loop 
             playsInline
-            className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-[3000ms]"
+            className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-3000"
           >
-            <source src="/video/video1.mp4" type="video/mp4" />
+            <source src="../video/Video1.mp4" type="video/mp4" />
           </video>
 
           {/* Overlay */}
@@ -36,8 +36,8 @@ const VideoSection: React.FC = () => {
           </div>
 
           {/* Tech lines decoration */}
-          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-orange-500/20 to-transparent"></div>
-          <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-orange-500/20 to-transparent"></div>
+          <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-orange-500/20 to-transparent"></div>
+          <div className="absolute bottom-0 left-0 w-full h-px bg-linear-to-r from-transparent via-orange-500/20 to-transparent"></div>
         </div>
       </div>
     </section>

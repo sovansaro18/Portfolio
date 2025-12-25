@@ -21,11 +21,11 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav className="fixed w-full top-0 left-0 z-[100] px-6 py-6 pointer-events-none flex justify-center">
+    <nav className="fixed w-full top-0 left-0 z-100 px-6 py-6 pointer-events-none flex justify-center">
       <motion.div 
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className={`w-full max-w-5xl flex items-center justify-between p-3 rounded-[1.5rem] transition-all duration-700 pointer-events-auto ${scrolled ? 'pearl-glass shadow-2xl border-white/10' : ''}`}
+        className={`w-full max-w-5xl flex items-center justify-between p-3 rounded-3xl transition-all duration-700 pointer-events-auto ${scrolled ? 'pearl-glass shadow-2xl border-white/10' : ''}`}
       >
         <a href="#" className="flex items-center gap-3 px-4">
           <span className="font-bold text-2xl tracking-tighter text-white">RA VI</span>
@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 bg-zinc-950 z-[99] flex flex-col items-center justify-center p-10 pointer-events-auto"
+            className="fixed inset-0 bg-zinc-950 z-99 flex flex-col items-center justify-center p-10 pointer-events-auto"
           >
             <button onClick={() => setIsOpen(false)} className="absolute top-10 right-10 p-4 text-white"><X size={32} /></button>
             <div className="flex flex-col gap-12 text-center">

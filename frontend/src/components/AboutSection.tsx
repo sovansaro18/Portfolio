@@ -49,7 +49,7 @@ const AboutSection: React.FC = () => {
         <div className="relative order-1 lg:order-2 mb-8 lg:mb-0">
           <motion.div 
             whileHover={{ scale: 1.02, rotate: -1 }}
-            className="pearl-glass p-6 sm:p-8 rounded-[2rem] sm:rounded-[3rem] shadow-2xl relative z-10 border-white/10 overflow-hidden"
+            className="pearl-glass p-6 sm:p-8 rounded-4xl sm:rounded-[3rem] shadow-2xl relative z-10 border-white/10 overflow-hidden"
           >
             <div className="flex items-center gap-2 mb-4 sm:mb-6">
                <div className="w-2.5 h-2.5 rounded-full bg-red-500/60"></div>

@@ -105,7 +105,7 @@ const Hero: React.FC = () => {
                 <motion.span
                   animate={{ opacity: [1, 0] }}
                   transition={{ duration: 0.8, repeat: Infinity, ease: "steps(2)" }}
-                  className="inline-block w-[3px] sm:w-[6px] lg:w-[12px] h-[0.7em] bg-orange-500 ml-1 sm:ml-2 self-center rounded-full shadow-[0_0_15px_rgba(234,88,12,0.5)]"
+                  className="inline-block w-0.75 sm:w-1.5 lg:w-3 h-[0.7em] bg-orange-500 ml-1 sm:ml-2 self-center rounded-full shadow-[0_0_15px_rgba(234,88,12,0.5)]"
                 />
               </div>
               
@@ -160,7 +160,7 @@ const Hero: React.FC = () => {
                 default: { duration: 0.8 }
               }}
               style={{ rotate: imageRotate }}
-              className="relative w-full max-w-[320px] sm:max-w-[420px] lg:max-w-[500px] aspect-[4/5] z-20"
+              className="relative w-full max-w-[320px] sm:max-w-105 lg:max-w-125 aspect-4/5 z-20"
             >
               <motion.div 
                 whileHover={{ 
@@ -169,7 +169,7 @@ const Hero: React.FC = () => {
                   scale: 1.02,
                   boxShadow: "0 25px 50px -12px rgba(234, 88, 12, 0.25)" 
                 }}
-                className="relative w-full h-full rounded-[2rem] sm:rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl z-20 bg-zinc-900 cursor-pointer"
+                className="relative w-full h-full rounded-4xl sm:rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl z-20 bg-zinc-900 cursor-pointer"
               >
                 <motion.img 
                   src="/image/V2.jpg" 
@@ -182,9 +182,9 @@ const Hero: React.FC = () => {
                 <motion.div 
                   animate={{ x: ['-100%', '100%'] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "linear", repeatDelay: 5 }}
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 pointer-events-none"
+                  className="absolute inset-0 bg-linear-to-r from-transparent via-white/10 to-transparent -skew-x-12 pointer-events-none"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent opacity-60"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-zinc-950 via-transparent to-transparent opacity-60"></div>
               </motion.div>
 
               <motion.div 
@@ -192,7 +192,7 @@ const Hero: React.FC = () => {
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                 className="absolute -inset-6 border border-orange-500/10 rounded-[2.5rem] sm:rounded-[4rem] -z-10 pointer-events-none border-dashed"
               ></motion.div>
-              <div className="absolute -inset-4 border border-orange-500/20 rounded-[2rem] sm:rounded-[3.5rem] -z-10 pointer-events-none"></div>
+              <div className="absolute -inset-4 border border-orange-500/20 rounded-4xl sm:rounded-[3.5rem] -z-10 pointer-events-none"></div>
               
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-orange-600/10 blur-[100px] rounded-full -z-20"></div>
 

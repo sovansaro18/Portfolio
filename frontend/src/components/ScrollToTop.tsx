@@ -27,7 +27,7 @@ const ScrollToTop: React.FC = () => {
   };
 
   return (
-    <div className="fixed bottom-8 left-8 z-[60]">
+    <div className="fixed bottom-8 left-8 z-60">
       <AnimatePresence>
         {isVisible && (
           <motion.button

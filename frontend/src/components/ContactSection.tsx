@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CONTACTS } from '../constants';
-import { Mail, Send, Github, Facebook } from 'lucide-react';
+import { Mail, Send, Github, Facebook, Download } from 'lucide-react';
 
 const ContactSection: React.FC = () => {
   return (
@@ -17,14 +17,18 @@ const ContactSection: React.FC = () => {
             Let's build <br /> <span className="text-gradient italic font-light">something.</span>
           </h2>
           
-          <motion.a
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            href="mailto:contact@ravi.dev"
-            className="inline-flex items-center gap-3 sm:gap-4 px-8 py-4 sm:px-12 sm:py-6 bg-orange-600 text-white rounded-2xl sm:rounded-[2rem] font-bold text-base sm:text-lg shadow-2xl shadow-orange-900/40 hover:bg-orange-700 transition-all mb-16 sm:mb-20"
-          >
-            Say Hello <Mail size={20} className="sm:hidden" /> <Mail size={24} className="hidden sm:block" />
-          </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href="/cv/cv.pdf"
+              download="Ravi_CV.pdf"
+              target="_blank"
+              className="inline-flex items-center gap-3 sm:gap-4 px-8 py-4 sm:px-12 sm:py-6 bg-orange-600 text-white rounded-2xl sm:rounded-4xl font-bold text-base sm:text-lg shadow-2xl shadow-orange-900/40 hover:bg-orange-700 transition-all mb-16 sm:mb-20 cursor-pointer"
+            >
+              Download CV 
+              <Download size={20} className="sm:hidden" /> 
+              <Download size={24} className="hidden sm:block" />
+            </motion.a>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
             <SocialItem icon={<Github size={20} />} name="GitHub" label={`@${CONTACTS.github}`} url={`https://github.com/${CONTACTS.github}`} />
@@ -38,7 +42,7 @@ const ContactSection: React.FC = () => {
 };
 
 const SocialItem = ({ icon, name, label, url }: any) => (
-  <a href={url} className="p-6 sm:p-8 rounded-2xl sm:rounded-[2rem] border border-white/5 hover:bg-white/5 transition-all group">
+  <a href={url} className="p-6 sm:p-8 rounded-2xl sm:rounded-4xl border border-white/5 hover:bg-white/5 transition-all group">
     <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-zinc-900 flex items-center justify-center text-zinc-500 group-hover:text-orange-500 group-hover:bg-orange-500/10 transition-all mx-auto mb-3 sm:mb-4 border border-white/5">
       {icon}
     </div>
