@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfilo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;800&family=Bricolage+Grotesque:wght@800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #09090b;
+            --accent: #ea580c;
+            --text: #fafafa;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .heading-font {
+            font-family: 'Bricolage Grotesque', sans-serif;
+        }
+
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+
+        .pearl-glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px) saturate(180%);
+            -webkit-backdrop-filter: blur(12px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+        }
+
+        .aurora {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            filter: blur(100px);
+            opacity: 0.25;
+            pointer-events: none;
+        }
+        .blob-1 { background: #ea580c; width: 40vw; height: 40vw; top: -10%; right: -5%; border-radius: 50%; position: absolute; animation: drift 20s infinite alternate; }
+        .blob-2 { background: #7c2d12; width: 35vw; height: 35vw; bottom: -10%; left: -5%; border-radius: 50%; position: absolute; animation: drift 25s infinite alternate-reverse; }
+
+        @keyframes drift {
+            from { transform: translate(0, 0) scale(1); }
+            to { transform: translate(100px, 50px) scale(1.1); }
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #ea580c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #3f3f46; }
+
+        .glass-panel {
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+
+<link rel="stylesheet" href="./src/index.css">
+</head>
+<body>
+    <div class="aurora">
+        <div class="blob-1"></div>
+        <div class="blob-2"></div>
+    </div>
+    <div id="root"></div>
+<script type="module" src="/src/index.tsx"></script>
+</body>
+</html>
